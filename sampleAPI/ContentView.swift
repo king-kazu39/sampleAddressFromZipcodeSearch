@@ -43,6 +43,10 @@ struct ContentView: View {
                         AddressListView(addressStrings: self.$contentVM.addressArrayStrings,
                                         contentVM: self.contentVM)
                     }
+                    .alert(isPresented: self.$contentVM.alertStruct.showAlert) {
+                        Alert(title: Text("\(self.contentVM.alertStruct.alertTitle)"),
+                              message: Text("\(self.contentVM.alertStruct.alertMsg)"))
+                    }
                 }
                 TextField("Please input your address01", text: $address01)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
