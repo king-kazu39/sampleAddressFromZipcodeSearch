@@ -15,6 +15,8 @@
 		E524E3B2254E54D7009DD0D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E524E3B0254E54D7009DD0D0 /* LaunchScreen.storyboard */; };
 		E524E3BB254E5914009DD0D0 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524E3BA254E5914009DD0D0 /* ContentViewModel.swift */; };
 		E524E3BE254E5957009DD0D0 /* AddressResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524E3BD254E5957009DD0D0 /* AddressResponse.swift */; };
+		E554F13F2556DAC800590AE0 /* Extension+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554F13E2556DAC800590AE0 /* Extension+URL.swift */; };
+		E554F1432556DB1600590AE0 /* APIResponseEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554F1422556DB1600590AE0 /* APIResponseEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		E524E3B3254E54D7009DD0D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E524E3BA254E5914009DD0D0 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		E524E3BD254E5957009DD0D0 /* AddressResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressResponse.swift; sourceTree = "<group>"; };
+		E554F13E2556DAC800590AE0 /* Extension+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URL.swift"; sourceTree = "<group>"; };
+		E554F1422556DB1600590AE0 /* APIResponseEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				E524E3A9254E54D5009DD0D0 /* ContentView.swift */,
 				E524E3BA254E5914009DD0D0 /* ContentViewModel.swift */,
 				E524E3BD254E5957009DD0D0 /* AddressResponse.swift */,
+				E554F13E2556DAC800590AE0 /* Extension+URL.swift */,
+				E554F1422556DB1600590AE0 /* APIResponseEdit.swift */,
 				E524E3AB254E54D7009DD0D0 /* Assets.xcassets */,
 				E524E3B0254E54D7009DD0D0 /* LaunchScreen.storyboard */,
 				E524E3B3254E54D7009DD0D0 /* Info.plist */,
@@ -152,10 +158,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E524E3BB254E5914009DD0D0 /* ContentViewModel.swift in Sources */,
+				E554F13F2556DAC800590AE0 /* Extension+URL.swift in Sources */,
 				E524E3A6254E54D5009DD0D0 /* AppDelegate.swift in Sources */,
 				E524E3A8254E54D5009DD0D0 /* SceneDelegate.swift in Sources */,
 				E524E3BE254E5957009DD0D0 /* AddressResponse.swift in Sources */,
 				E524E3AA254E54D5009DD0D0 /* ContentView.swift in Sources */,
+				E554F1432556DB1600590AE0 /* APIResponseEdit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

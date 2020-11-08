@@ -40,52 +40,24 @@ class ContentViewModel: ObservableObject {
         return request
     }
     
-    func changeResponseValue(_ updateUI: @escaping ()->Void){
+    func changeResponseValue(_ updateUI: @escaping ()->Void) {
         if self.addressResponse.results.count > 1 {
             DispatchQueue.main.async {
                 self.isPresented = true
-                self.addressArrayStrings = self.makeAddressArrayString()
+                self.addressArrayStrings = APIResponseEdit
+                                            .makeAddressArrayString(self.addressResponse.results)
             }
-        } else {
+            return
+        }
+        
+        if self.addressResponse.results.count == 1 {
             DispatchQueue.main.async {
-                self.addressString = self.makeAddressString() ?? ""
+                self.addressString = APIResponseEdit
+                                      .makeAddressString(self.addressResponse.results) ?? ""
                 updateUI()
             }
+            return
         }
     }
     
-    func makeAddressArrayString() -> [String] {
-        var addressStrings = [String]()
-        for result in addressResponse.results {
-            addressString = result.address1!
-                          + result.address2!
-                          + result.address3!
-            addressStrings.append(addressString)
-            addressString = ""
-        }
-        return addressStrings
-    }
-    
-    func makeAddressString() -> String? {
-        return self.addressResponse.results[0].address1!
-             + self.addressResponse.results[0].address2!
-             + self.addressResponse.results[0].address3!
-    }
-}
-
-/**
- https://qiita.com/KosukeOhmura/items/8b65bdb63da6df95c7a3
- */
-extension URL {
-    func queryItemAdded(name: String, value: String?) -> URL? {
-        return self.queryItemsAdded([URLQueryItem(name: name, value: value)])
-    }
-    
-    func queryItemsAdded(_ queryItems: [URLQueryItem]) -> URL? {
-        guard var components = URLComponents(url: self, resolvingAgainstBaseURL: nil != self.baseURL) else {
-            return nil
-        }
-        components.queryItems = queryItems + (components.queryItems ?? [])
-        return components.url
-    }
 }
