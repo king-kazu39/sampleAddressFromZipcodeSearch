@@ -8,7 +8,8 @@
 import Foundation
 
 struct AddressResponse: Decodable {
-    var results: [Result]
+    var message: String?
+    var results: [Result]?
 }
 
 struct Result: Decodable {
