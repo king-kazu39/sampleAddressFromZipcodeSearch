@@ -54,7 +54,7 @@ class CreateViewModel: ObservableObject {
         switch count {
         case 1:
             DispatchQueue.main.async {
-                self.addressString = APIResponseEdit.makeAddressString(self.addressResponse.results ?? []) ?? ""
+                self.addressString = AddressHelper.makeAddressString(self.addressResponse.results ?? []) ?? ""
                 updateUI()
             }
         case 0:
@@ -74,7 +74,7 @@ class CreateViewModel: ObservableObject {
         default:
             DispatchQueue.main.async {
                 self.isPresented = true
-                self.addressArrayStrings = APIResponseEdit.makeAddressArrayString(self.addressResponse.results ?? [])
+                self.addressArrayStrings = AddressHelper.makeAddressArrayString(self.addressResponse.results ?? [])
             }
         }
     }
