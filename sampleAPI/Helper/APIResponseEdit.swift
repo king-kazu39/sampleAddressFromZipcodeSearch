@@ -26,21 +26,5 @@ class APIResponseEdit {
              + arrayAddress[0].address3!
     }
     
-    func conditionHandleDependsOnCount(count: Int) -> Bool {
-        return count > 1 ? true : false
-    }
-    
-    func passValueToMainthread(_ updateUI: @escaping () -> Void) {
-        DispatchQueue.main.async {
-            updateUI()
-        }
-    }
-    
-    func methodHandler(_ condition: Bool, handle: @escaping () -> Void) {
-        if condition {
-            handle()
-            return
-        }
-    }
     
 }
