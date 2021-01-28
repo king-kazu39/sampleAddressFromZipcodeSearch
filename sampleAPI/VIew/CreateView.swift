@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CreateView: View {
     
+    @State var name = ""
+    @State var phoneNumber = ""
     @State var zipcode = ""
     @State var address01 = ""
     @State var address02 = ""
@@ -19,6 +21,16 @@ struct CreateView: View {
         NavigationView {
             VStack {
                 VStack {
+                    Image(systemName: "person.circle")
+                        .resizable()
+                        .frame(width: 150, height: 150)
+                        .padding()
+                    TextField("Please input your name", text: $name)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal, 15)
+                    TextField("Please input your phone number", text: $phoneNumber)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal, 15)
                     HStack {
                         TextField("Please input zipcode", text: $zipcode)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -52,9 +64,6 @@ struct CreateView: View {
                     TextField("Please input your address01", text: $address01)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal, 15)
-                    TextField("Please input your address02", text: $address02)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding(.horizontal, 15)
                     Button(action: {
                         // save action
                     }){
@@ -67,35 +76,6 @@ struct CreateView: View {
                     .padding(.horizontal, 10)
                 }
                 .navigationBarTitle("プロフィール登録", displayMode: .inline)
-            }
-        }
-    }
-}
-
-struct AddressListView: View {
-    @Binding var addressStrings: [String]
-    @ObservedObject var createVM: CreateViewModel
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("Close")
-                        .foregroundColor(.red)
-                        .padding()
-                }
-            }
-            List(addressStrings, id: \.self) { address in
-                Button(action: {
-                    self.presentationMode.wrappedValue.dismiss()
-                    self.createVM.addressString = address
-                }) {
-                    Text("\(address)")
-                }
             }
         }
     }

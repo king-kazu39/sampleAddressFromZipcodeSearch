@@ -19,6 +19,7 @@
 		E554F1432556DB1600590AE0 /* APIResponseEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554F1422556DB1600590AE0 /* APIResponseEdit.swift */; };
 		E55F3E4625C303EF00DA6480 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55F3E4525C303EF00DA6480 /* TabBarView.swift */; };
 		E5D0EC6925C30B46000728B5 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0EC6825C30B46000728B5 /* ProfileCell.swift */; };
+		E5D0EC6F25C31788000728B5 /* AddressListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0EC6E25C31788000728B5 /* AddressListView.swift */; };
 		E5ECE47C25C304FE00DDF642 /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ECE47B25C304FE00DDF642 /* ProfileListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		E554F1422556DB1600590AE0 /* APIResponseEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseEdit.swift; sourceTree = "<group>"; };
 		E55F3E4525C303EF00DA6480 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		E5D0EC6825C30B46000728B5 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		E5D0EC6E25C31788000728B5 /* AddressListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListView.swift; sourceTree = "<group>"; };
 		E5ECE47B25C304FE00DDF642 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				E524E3A9254E54D5009DD0D0 /* CreateView.swift */,
+				E5D0EC6E25C31788000728B5 /* AddressListView.swift */,
 				E5D0EC6825C30B46000728B5 /* ProfileCell.swift */,
 				E5ECE47B25C304FE00DDF642 /* ProfileListView.swift */,
 				E55F3E4525C303EF00DA6480 /* TabBarView.swift */,
@@ -208,6 +211,7 @@
 			files = (
 				E524E3BB254E5914009DD0D0 /* CreateViewModel.swift in Sources */,
 				E554F13F2556DAC800590AE0 /* Extension+URL.swift in Sources */,
+				E5D0EC6F25C31788000728B5 /* AddressListView.swift in Sources */,
 				E55F3E4625C303EF00DA6480 /* TabBarView.swift in Sources */,
 				E524E3A6254E54D5009DD0D0 /* AppDelegate.swift in Sources */,
 				E5ECE47C25C304FE00DDF642 /* ProfileListView.swift in Sources */,
