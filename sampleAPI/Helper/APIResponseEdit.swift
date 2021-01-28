@@ -1,5 +1,5 @@
 //
-//  APIResponseEdit.swift
+//  AddressHelper.swift
 //  sampleAPI
 //
 //  Created by kazuya on 2020/11/07.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class APIResponseEdit {
+class AddressHelper {
     static func makeAddressArrayString(_ arrayAddress: [Result]) -> [String] {
         var addressStrings = [String]()
         for result in arrayAddress {

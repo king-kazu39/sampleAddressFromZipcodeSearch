@@ -18,6 +18,7 @@
 		E554F13F2556DAC800590AE0 /* Extension+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554F13E2556DAC800590AE0 /* Extension+URL.swift */; };
 		E554F1432556DB1600590AE0 /* APIResponseEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E554F1422556DB1600590AE0 /* APIResponseEdit.swift */; };
 		E55F3E4625C303EF00DA6480 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55F3E4525C303EF00DA6480 /* TabBarView.swift */; };
+		E5D0EC6925C30B46000728B5 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0EC6825C30B46000728B5 /* ProfileCell.swift */; };
 		E5ECE47C25C304FE00DDF642 /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ECE47B25C304FE00DDF642 /* ProfileListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		E554F13E2556DAC800590AE0 /* Extension+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+URL.swift"; sourceTree = "<group>"; };
 		E554F1422556DB1600590AE0 /* APIResponseEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseEdit.swift; sourceTree = "<group>"; };
 		E55F3E4525C303EF00DA6480 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		E5D0EC6825C30B46000728B5 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		E5ECE47B25C304FE00DDF642 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 			children = (
 				E524E3A5254E54D5009DD0D0 /* AppDelegate.swift */,
 				E524E3A7254E54D5009DD0D0 /* SceneDelegate.swift */,
+				E577970025C309E200C30665 /* Extension */,
 				E5ECE48325C3078400DDF642 /* ViewModel */,
 				E5ECE48225C3077A00DDF642 /* VIew */,
 				E5ECE48525C307BC00DDF642 /* Model */,
@@ -90,10 +93,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E577970025C309E200C30665 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E554F13E2556DAC800590AE0 /* Extension+URL.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		E5ECE48225C3077A00DDF642 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
 				E524E3A9254E54D5009DD0D0 /* CreateView.swift */,
+				E5D0EC6825C30B46000728B5 /* ProfileCell.swift */,
 				E5ECE47B25C304FE00DDF642 /* ProfileListView.swift */,
 				E55F3E4525C303EF00DA6480 /* TabBarView.swift */,
 			);
@@ -111,7 +123,6 @@
 		E5ECE48425C307A900DDF642 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				E554F13E2556DAC800590AE0 /* Extension+URL.swift */,
 				E554F1422556DB1600590AE0 /* APIResponseEdit.swift */,
 			);
 			path = Helper;
@@ -204,6 +215,7 @@
 				E524E3BE254E5957009DD0D0 /* AddressResponse.swift in Sources */,
 				E524E3AA254E54D5009DD0D0 /* CreateView.swift in Sources */,
 				E554F1432556DB1600590AE0 /* APIResponseEdit.swift in Sources */,
+				E5D0EC6925C30B46000728B5 /* ProfileCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
