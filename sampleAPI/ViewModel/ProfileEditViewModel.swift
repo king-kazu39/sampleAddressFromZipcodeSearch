@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class CreateViewModel: ObservableObject {
+class ProfileEditViewModel: ObservableObject {
     var addressResponse = AddressResponse(results: [])
     @Published var addressString: String = ""
     @Published var addressArrayStrings: [String] = []

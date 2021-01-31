@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct CreateView: View {
+struct ProfileEditView: View {
     
+    var viewTitle: String
     @State var name = ""
     @State var phoneNumber = ""
     @State var zipcode = ""
     @State var address01 = ""
     @State var address02 = ""
     
-    @ObservedObject var createVM = CreateViewModel()
+    @ObservedObject var profileEditVM = ProfileEditViewModel()
     
     var body: some View {
         NavigationView {
@@ -37,9 +38,9 @@ struct CreateView: View {
                             .padding(.horizontal, 15)
                         Button(action: {
                             // api request
-                            self.createVM.getAddress(self.zipcode) {
-                                if !self.createVM.isPresented {
-                                    self.address01 = self.createVM.addressString
+                            self.profileEditVM.getAddress(self.zipcode) {
+                                if !self.profileEditVM.isPresented {
+                                    self.address01 = self.profileEditVM.addressString
                                 }
                             }
                         }){
@@ -49,16 +50,16 @@ struct CreateView: View {
                         }.background(Color.blue)
                         .cornerRadius(10)
                         .padding(.horizontal, 10)
-                        .sheet(isPresented: self.$createVM.isPresented,
+                        .sheet(isPresented: self.$profileEditVM.isPresented,
                                onDismiss: {
-                                self.address01 = self.createVM.addressString
+                                self.address01 = self.profileEditVM.addressString
                                }) {
-                            AddressListView(addressStrings: self.$createVM.addressArrayStrings,
-                                            createVM: self.createVM)
+                            AddressListView(addressStrings: self.$profileEditVM.addressArrayStrings,
+                                            profileEditVM: self.profileEditVM)
                         }
-                        .alert(isPresented: self.$createVM.alertStruct.showAlert) {
-                            Alert(title: Text("\(self.createVM.alertStruct.alertTitle)"),
-                                  message: Text("\(self.createVM.alertStruct.alertMsg)"))
+                        .alert(isPresented: self.$profileEditVM.alertStruct.showAlert) {
+                            Alert(title: Text("\(self.profileEditVM.alertStruct.alertTitle)"),
+                                  message: Text("\(self.profileEditVM.alertStruct.alertMsg)"))
                         }
                     }
                     TextField("Please input your address01", text: $address01)
@@ -75,14 +76,14 @@ struct CreateView: View {
                     .cornerRadius(10)
                     .padding(.horizontal, 10)
                 }
-                .navigationBarTitle("プロフィール登録", displayMode: .inline)
+                .navigationBarTitle(viewTitle, displayMode: .inline)
             }
         }
     }
 }
 
-struct CreateView_Previews: PreviewProvider {
+struct ProfileEditView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateView()
+        ProfileEditView(viewTitle: "プロフィール登録")
     }
 }

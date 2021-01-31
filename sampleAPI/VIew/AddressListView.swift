@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddressListView: View {
     @Binding var addressStrings: [String]
-    @ObservedObject var createVM: CreateViewModel
+    @ObservedObject var profileEditVM: ProfileEditViewModel
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -27,7 +27,7 @@ struct AddressListView: View {
             List(addressStrings, id: \.self) { address in
                 Button(action: {
                     self.presentationMode.wrappedValue.dismiss()
-                    self.createVM.addressString = address
+                    self.profileEditVM.addressString = address
                 }) {
                     Text("\(address)")
                 }
@@ -38,6 +38,6 @@ struct AddressListView: View {
 
 struct AddressListView_Previews: PreviewProvider {
     static var previews: some View {
-        AddressListView(addressStrings: .constant(["南風原町","西原町"]), createVM: CreateViewModel())
+        AddressListView(addressStrings: .constant(["南風原町","西原町"]), profileEditVM: ProfileEditViewModel())
     }
 }

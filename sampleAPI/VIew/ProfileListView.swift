@@ -13,13 +13,18 @@ struct ProfileListView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 ForEach(0..<10) {_ in
                     LazyVStack {
-                        ProfileCell(username: "愛知太郎")
+                        NavigationLink(destination: ProfileEditView(viewTitle: "プロフィール編集")) {
+                            ProfileCell(username: "愛知太郎")
+                        }
                     }
                 }
                 .padding(.top, 20)
                 .padding(.bottom, 30)
-            }.frame(width: UIScreen.main.bounds.width - 30,
-                    height: .infinity)
+            }
+            .frame(minWidth: 0,
+                   maxWidth: UIScreen.main.bounds.width - 30,
+                   minHeight: 0,
+                   maxHeight: .infinity)
             .navigationBarTitle("プロフィール一覧", displayMode: .inline)
         }
     }
