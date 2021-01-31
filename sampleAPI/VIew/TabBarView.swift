@@ -15,7 +15,7 @@ struct TabBarView: View {
                     Image(systemName: "list.bullet.rectangle")
                     Text("プロフィール一覧")
                 }
-            CreateView()
+            ProfileEditView(viewTitle: "プロフィール登録")
                 .tabItem{
                     Image(systemName: "person.crop.circle.badge.plus")
                     Text("プロフィール登録")
