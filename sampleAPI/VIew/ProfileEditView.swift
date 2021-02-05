@@ -16,16 +16,58 @@ struct ProfileEditView: View {
     @State var address01 = ""
     @State var address02 = ""
     
+    @State var showingActionSheet = false
+    @State var isShowCamera = false
+    @State var isShowPhotoLibrary = false
+    @State var inputImage: UIImage? = UIImage()
+    @State var image:Image = Image(systemName: "person.circle")
+    
     @ObservedObject var profileEditVM = ProfileEditViewModel()
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+    }
     
     var body: some View {
         NavigationView {
             VStack {
                 VStack {
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .frame(width: 150, height: 150)
-                        .padding()
+                    
+                    Button(action: {
+                        self.showingActionSheet = true
+                    }) {
+                        image
+                            .resizable()
+                            .frame(width: 150, height: 150)
+                            .padding()
+                    }
+                    ZStack {
+                        Text("")
+                            .actionSheet(isPresented: self.$showingActionSheet) {
+                                ActionSheet(title: Text("画像選択"),
+                                            message: Text("画像を選択します"),
+                                            buttons: [
+                                                .default(Text("写真から選択")) {
+                                                    self.isShowPhotoLibrary.toggle()
+                                                },
+                                                .default(Text("写真を撮る")) {
+                                                    self.isShowCamera.toggle()
+                                                },
+                                                .cancel()
+                                            ])
+                            }
+                            .sheet(isPresented: self.$isShowPhotoLibrary,
+                                   onDismiss: loadImage) {
+                                ImagePicker(sourceType: .photoLibrary, selectedImage: self.$inputImage)
+                            }
+                        Text("")
+                            .sheet(isPresented: self.$isShowCamera,
+                                   onDismiss: loadImage) {
+                                ImagePicker(sourceType: .camera, selectedImage: self.$inputImage)
+                            }
+                    }
+                    
                     TextField("Please input your name", text: $name)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal, 15)
