@@ -22,6 +22,8 @@
 		E5D0EC6925C30B46000728B5 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0EC6825C30B46000728B5 /* ProfileCell.swift */; };
 		E5D0EC6F25C31788000728B5 /* AddressListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D0EC6E25C31788000728B5 /* AddressListView.swift */; };
 		E5ECE47C25C304FE00DDF642 /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5ECE47B25C304FE00DDF642 /* ProfileListView.swift */; };
+		E5FC3C6825CD79E700FC9168 /* ActionSheetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC3C6725CD79E700FC9168 /* ActionSheetButton.swift */; };
+		E5FC3C6C25CD7A7C00FC9168 /* ButtonAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC3C6B25CD7A7C00FC9168 /* ButtonAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		E5D0EC6825C30B46000728B5 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		E5D0EC6E25C31788000728B5 /* AddressListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressListView.swift; sourceTree = "<group>"; };
 		E5ECE47B25C304FE00DDF642 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
+		E5FC3C6725CD79E700FC9168 /* ActionSheetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetButton.swift; sourceTree = "<group>"; };
+		E5FC3C6B25CD7A7C00FC9168 /* ButtonAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,7 @@
 		E5ECE48225C3077A00DDF642 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				E5FC3C6625CD79C600FC9168 /* UIComponents */,
 				E524E3A9254E54D5009DD0D0 /* ProfileEditView.swift */,
 				E5D0EC6E25C31788000728B5 /* AddressListView.swift */,
 				E5D0EC6825C30B46000728B5 /* ProfileCell.swift */,
@@ -148,6 +153,15 @@
 				E524E3BD254E5957009DD0D0 /* AddressResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E5FC3C6625CD79C600FC9168 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E5FC3C6725CD79E700FC9168 /* ActionSheetButton.swift */,
+				E5FC3C6B25CD7A7C00FC9168 /* ButtonAction.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +237,11 @@
 				E524E3BB254E5914009DD0D0 /* ProfileEditViewModel.swift in Sources */,
 				E554F13F2556DAC800590AE0 /* Extension+URL.swift in Sources */,
 				E5D0EC6F25C31788000728B5 /* AddressListView.swift in Sources */,
+				E5FC3C6825CD79E700FC9168 /* ActionSheetButton.swift in Sources */,
 				E55F3E4625C303EF00DA6480 /* TabBarView.swift in Sources */,
 				E524E3A6254E54D5009DD0D0 /* AppDelegate.swift in Sources */,
 				E5ECE47C25C304FE00DDF642 /* ProfileListView.swift in Sources */,
+				E5FC3C6C25CD7A7C00FC9168 /* ButtonAction.swift in Sources */,
 				E524E3A8254E54D5009DD0D0 /* SceneDelegate.swift in Sources */,
 				E524E3BE254E5957009DD0D0 /* AddressResponse.swift in Sources */,
 				E524E3AA254E54D5009DD0D0 /* ProfileEditView.swift in Sources */,
